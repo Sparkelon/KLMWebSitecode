@@ -213,7 +213,7 @@ public class firstscreen {
 	    	   	   Thread.sleep(10000); 
 	    	   	 submit.click();
 	    	   	 
-	    	  	   
+	    	     System.out.println("test"); 	   
 	    		    	        
 	}
 }
