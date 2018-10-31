@@ -99,9 +99,14 @@ public class klmfirstscreen {
 		    	        deptflightlink.click();
 		    	        Thread.sleep(5000);
 		    	       // WebElement availflightdate= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div[5]/div/div[2]/div/div/div/div[3]/div[1]/div[2]/div[2]/div/div[12]")));
-		    	        WebElement availflightdate= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div[5]/div/div[2]/div/div/div/div[3]/div/div[2]/div[3]/div/div[12]")));
-			    	       availflightdate.click() ;
+		    	       // WebElement availflightdate= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div[5]/div/div[2]/div/div/div/div[3]/div/div[2]/div[3]/div/div[12]")));
+		    	     /*  WebElement img= driver.findElement(By.xpath("//*[@aria-label = 'Continue']"));
+		    	        img.click();
+		    	        Thread.sleep(3000);*/
+		    	        WebElement availflightdate= driver.findElement(By.xpath("//*[@data-a11ydate = 'Monday, November 12, 2018']"));
 		    	        Thread.sleep(3000);
+		    	        availflightdate.click();
+		    	        
 		    	        /* WebElement availflightdate= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div[5]/div/div[2]/div/div/div/div[3]/div[1]/div[2]/div[2]/div/div[12]")));
 		    	       availflightdate.click(); 
 		    	        Thread.sleep(3000);*/
@@ -111,8 +116,12 @@ public class klmfirstscreen {
 		    	        Thread.sleep(3000);*/
 		    	        
 		    	        //code for  choose a return flight date --EUR....
+		    	        Thread.sleep(4000);
 		    	        
-		    	        driver.findElement((By.xpath( "/html/body/div[5]/div/div[2]/div/div/div/div[3]/div[2]/div/ul/li/div[1]/div/div/div[5]/button"))).click();
+		    	      //*[@id="brandedFaresWidgetContainer"]/div/div/div[3]/div[2]/div/ul/li[2]/div[1]/div/div
+		    	        driver.findElement((By.xpath("//li[@class='bf-flight-list__item g-hc-ignore']"))).click();
+		    	        
+		    	        //driver.findElement((By.xpath( "/html/body/div[5]/div/div[2]/div/div/div/div[3]/div[2]/div/ul/li/div[1]/div/div/div[5]/button"))).click();
 		    	        Thread.sleep(3000);
 		    	        
 		    	        //first page continue --we can see here continue,mail my search details
@@ -156,12 +165,13 @@ public class klmfirstscreen {
 		    	             //input[@id='passengerField_1001_firstName']
 		    	   	  firstname.sendKeys(s.getCell(4,i).getContents());
 		    	   	 //firstname.sendKeys("alekkk");
+		    	   	Thread.sleep(2000);
 		    	   	   WebElement lastname = driver.findElement(By.id("passengerField_1000_lastName"));
 		    	   		//input[@id='passengerField_1001_lastName']
 		    	   	   lastname.sendKeys(s.getCell(5,i).getContents());
 		    	   	  // lastname.sendKeys("tttt");
 		    	   	 //checkout-form-validation-group[@form-name='passengerField_1001_dateOfBirth']//select[@name='year']
-
+		    	   	Thread.sleep(2000);
 		    	   	  // WebElement day =  driver.findElement(By.name("day"));
 		    	   	   WebElement day =  driver.findElement(By.xpath("//checkout-form-validation-group[@form-name='passengerField_1000_dateOfBirth']//select[@name='day']"));
 		    	   	 
